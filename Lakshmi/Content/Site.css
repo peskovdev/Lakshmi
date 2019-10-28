@@ -9,6 +9,11 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+header {
+    width: 1170px;
+    margin: auto;
+    background: #272727;
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -54,19 +59,6 @@ textarea {
     width: 150px;
     height: 150px;
     margin-top: 16px;
-}
-
-header{
-    position: static;
-}
-
-.navbar-fixed-top {
-    background: #e0e0e0;
-    margin-top: -30px;
-    margin-bottom: 10px;
-}
-.container {
-    background: #272727;
 }
 .body-content{
     background: white;
