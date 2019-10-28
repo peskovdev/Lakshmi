@@ -1,0 +1,9 @@
+﻿@using Microsoft.AspNet.Identity
+
+<h3>Вы только что удалили аккаунт</h3>
+@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+{
+    @Html.AntiForgeryToken()
+        <a style="font-size:2em;" href="javascript:document.getElementById('logoutForm').submit()">На главную</a>
+}
+

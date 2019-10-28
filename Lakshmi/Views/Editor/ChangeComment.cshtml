@@ -1,0 +1,22 @@
+﻿@model Lakshmi.Models.Comment
+
+<div style="text-align: center">
+    @using (Html.BeginForm("ChangeComment", "Editor", FormMethod.Post, new
+    { enctype = "multipart/form-data" }))
+    {
+        <div id="Photo_stena">
+            <div class="ex1">
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.ApplicationUserId)
+                @Html.HiddenFor(m => m.PhotoId)
+
+                <textarea style="width: 550px; height: 80px;" rows="10" cols="45" name="Record" maxlength="500" placeholder="ВЫ можете написать коментарий к фото" required>@Model.Record</textarea>
+            </div>
+        </div>
+        <br />
+
+        <p>
+            <input style="width: 300px; font-size: 1.4em; height: 35px;" type="submit" value="Изменить!" />
+        </p>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@model Lakshmi.Models.Photo
+    <div style="display:flex; flex-direction: column; align-items: center;">
+        <h3>Вы можете изменить подпись фотографии</h3>
+        @using (Html.BeginForm("Change", "Editor", FormMethod.Post, new
+        { enctype = "multipart/form-data" }))
+        {
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.Image)
+            @Html.HiddenFor(m => m.ApplicationUserId)
+            <br />
+            <div class="editor-field">
+                <textarea style="width: 550px; height: 80px;" rows="10" cols="45" maxlength="1000" name="Name" placeholder="ВЫ можете написать коментарий к фото" required>@Model.Name</textarea>
+            </div>
+            <p>
+                <input style="width: 300px; font-size: 1.4em; height: 35px;" type="submit" value="Изменить" />
+            </p>
+        }
+    </div>

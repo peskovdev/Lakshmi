@@ -1,0 +1,29 @@
+﻿@model Lakshmi.Models.ApplicationUser
+@{
+    ViewBag.Title = "CreateRole";
+}
+
+<p style="font-size:2em;">Пользователь: </p>
+<p style="font-size:1.5em;">
+    @ViewBag.userName
+</p>
+<p>
+    @ViewBag.Roles
+</p>
+@using (Html.BeginForm("RoleEditor", "Admin", FormMethod.Post, new
+{ enctype = "multipart/form-data" }))
+{
+
+    <fieldset>
+        <div class="editor-label">Название</div>
+        <div class="editor-field">
+
+            <input type="text" value="@ViewBag.UserId" name="userid" />
+
+        </div>
+
+        <p>
+            <input type="submit" value="Добавить" />
+        </p>
+    </fieldset>
+}

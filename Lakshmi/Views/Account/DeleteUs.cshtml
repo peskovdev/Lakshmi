@@ -1,0 +1,14 @@
+﻿@model Lakshmi.Models.ApplicationUser
+
+<div style="text-align: center">
+    <h2>Вы действительно хотите <br />удалить этого юзера?</h2>
+
+
+    @using (Html.BeginForm("DeleteUs", "Account", FormMethod.Post, new
+    { enctype = "multipart/form-data" }))
+    {
+        <input style="width: 200px; font-size: 1.4em; height: 65px; text-align: center;" type="submit" value="удалить" />
+    }
+</div>
+
+

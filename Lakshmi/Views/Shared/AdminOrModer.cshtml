@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (User.IsInRole("Admin"))
+{
+    @Html.ActionLink("Админка", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+}

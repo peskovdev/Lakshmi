@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNet.Identity
+@model Lakshmi.Models.IndexViewModel
+@{
+    ViewBag.Title = "Управление";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Изменение параметров учетной записи</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Пароль:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Смена пароля", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Создать", "SetPassword")
+            }
+            ]
+        </dd>
+        <dt>Внешние имена входа:</dt>
+        <dd>
+            @Model.Logins.Count [
+            @Html.ActionLink("Управление", "ManageLogins") ]
+        </dd>
+        <dt>Удаление аккаунта:</dt>
+        <dd>
+            @Html.ActionLink("Удалить свой аккаунт", "Delete", "Account", new { id = User.Identity.GetUserId() })
+        </dd>
+    </dl>
+</div>
