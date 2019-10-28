@@ -4290,7 +4290,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-left: 0;
   }
 }
-.navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
   right: 0;

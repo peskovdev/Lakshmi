@@ -56,6 +56,10 @@ textarea {
     margin-top: 16px;
 }
 
+header{
+    position: static;
+}
+
 .navbar-fixed-top {
     background: #e0e0e0;
     margin-top: -30px;

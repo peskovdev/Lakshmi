@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -211,7 +211,7 @@ namespace Lakshmi.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model, HttpPostedFileBase uploadImage)
+        public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {

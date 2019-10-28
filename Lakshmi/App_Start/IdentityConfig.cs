@@ -20,8 +20,8 @@ namespace Lakshmi
         public Task SendAsync(IdentityMessage message)
         {
             
-            string from = "serpesgeikov@gmail.com";
-            string password = "pispispispispispispis777";
+            string from = "lakshmi.sergey@gmail.com";
+            string password = "veryhardpassword228";
             
 
             // настройка логина, пароля отправителя
